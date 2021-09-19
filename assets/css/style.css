@@ -1,0 +1,58 @@
+* {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: rgb(62, 184, 163);
+  
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+header {
+  background-color: darkslateblue;
+}
+
+main {
+  display: flex;
+
+}
+
+/*
+Ideas
+Scroll bar expands as current section header
+Each nav element has a faint background of the relevant topic
+ex. Ph.D. project as carbon-fiber tiling
+*/
+header nav{
+  
+}
+
+.banner {
+  background-image: url("https://mobizent.net/wp-content/uploads/2018/04/Home-Four-Banner-Background-Image.png");
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  padding: 0px;
+}
+
+.projects {
+  flex: 4 1 30%;
+}
+
+@media screen and (max-width:992) {
+  
+}
+
+@media screen and (max-width:768) {
+
+}
