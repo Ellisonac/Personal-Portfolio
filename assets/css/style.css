@@ -1,11 +1,59 @@
 * {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
+  margin: 0px;
+}
+
+:root {
+  --backcolor: darkslateblue;
+  --splashcolor: gray;
+  --boxcolor: rgb(165, 190, 186);
+  --bordercolor: black
 }
 
 body {
-  background-color: rgb(62, 184, 163);
-  
+  background-color: var(--backcolor);
+  margin: 0px;
+}
+
+#flexbox-main {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+  background-color: var(--splashcolor);
+}
+
+nav {
+  flex: 1 1 15%;
+  height: 100%;
+  background-color: var(--splashcolor);
+}
+
+nav ul {
+  display: flex;
+  padding: 0px;
+  list-style: none;
+  width: 100%;
+}
+
+nav ul li {
+  padding-top: 2%;
+  border-bottom: 3px solid var(--bordercolor);
+  width: 100%;
+  text-align: center
+}
+
+.sticky {
+  background-color: white;
+}
+
+#row-flex {
+  flex: 6 1 85%;
+  height: 100%;
+}
+
+header {
+  color: white;
 }
 
 h1 {
@@ -14,15 +62,37 @@ h1 {
 }
 
 h2 {
+  margin-left: 10%;
+  margin-bottom: 10px;
   font-size: 1.4rem;
+  text-align: center;
+  border-bottom: 1px solid var(--bordercolor);
+  width: 80%;
 }
 
 header {
-  background-color: darkslateblue;
+  background-color: var(--backcolor);
+  padding: 5%;
 }
 
 main {
+  flex: 7 1 85%;
   display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: var(--backcolor);
+}
+
+main section {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-color: var(--boxcolor);
+  box-shadow: 0px 5px 30px black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+article ul {
 
 }
 
@@ -32,21 +102,68 @@ Scroll bar expands as current section header
 Each nav element has a faint background of the relevant topic
 ex. Ph.D. project as carbon-fiber tiling
 */
-header nav{
-  
-}
+
 
 .banner {
-  background-image: url("https://mobizent.net/wp-content/uploads/2018/04/Home-Four-Banner-Background-Image.png");
-  height: 200px;
+  /* background-image: url("https://mobizent.net/wp-content/uploads/2018/04/Home-Four-Banner-Background-Image.png"); */
+  background-image: url("../images/CTBanner2.png");
+  height: 110px;
   width: 100%;
   background-size: cover;
   background-position: center;
   padding: 0px;
 }
 
+#about-me {
+  flex: 1 1 15%;
+}
+
+
+#hindi {
+  position: relative;
+  content: 'पहली बार ससुराल जाके मुझे समझे में आगाया था की मुझे हिंदी सीखना ज़रूरी है |';
+  position: relative;
+  font-size: 1.15rem;
+  color: royalblue;
+  text-decoration: underline;
+}
+
+#hindi:hover::after {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  padding: 3px;
+
+  content: "After the first time I visited my in-law's house, I knew that I would have to learn Hindi.";
+
+  /* height: 50px; */
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+/* Ask Frank for nice model input graphic that he generated */
+.image-box {
+  display: block flex;
+  flex-direction: column;
+}
+
 .projects {
   flex: 4 1 30%;
+}
+
+#project-1 img {
+  width: 40%;
+  border-radius: 5%;
+}
+
+#curved-CT img {
+  padding: 10px 0 10px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
 }
 
 @media screen and (max-width:992) {

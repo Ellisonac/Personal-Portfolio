@@ -6,8 +6,7 @@
 </head>
 
 <body>
-
-  <div id="flexbox-main"></div>
+  <div id="flexbox-main">
     <nav>
       <ul id="nav-list">
         <li>About Me</li>
@@ -16,6 +15,20 @@
         <li>Contact Me</li>
       </ul>
     </nav>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function(){
+        let nav = document.querySelector("nav")
+        let nav_list = document.querySelector("#nav-list")
+        nav.classList.toggle("sticky", window.scrollY > 0);
+        nav_list.classList.toggle("test", window.scrollY > 0);
+        console.log(nav_list.children[1]["flex-grow"])
+        // nav_list.children[1]["flex-grow"] = "5";
+        nav_list.children[1].setAttribute("flex-grow",5,window.scrollY > 0);
+        
+        
+      })
+    </script>
+
 
     <div id="row-flex">
       <section id="head-block">
@@ -23,7 +36,6 @@
           <h1>Andrew Ellison Portfolio</h1>
           <p>Check it out</p>
         </header>
-  
         <div class="banner"></div>
       </section>
   
@@ -36,7 +48,7 @@
               <li>I have a Ph.D. in Aerospace Composite Structures and a carbon fiber wallet</li>
               <li>Interests: Linguistics, Automation, Music, Learning</li>
               <li id="japanese">５年で学んでいますが、日本語を読書しかできるようになりました、残念ですが話せません</li>
-              <li id="hindi">पहली बार ससुराल जाके मुझे समझे में आगाया था की मुझे हिंदी सीखना ज़रूरी है </li>
+              <li id="hindi">पहली बार ससुराल जाके मुझे समझे में आगाया था की मुझे हिंदी सीखना ज़रूरी है |</li>
             </ul>
           </article>
           <img src="" alt="">
@@ -44,9 +56,26 @@
   
         <section class="projects">
           <article id="project-1">
-              <h2>Thesis Project NDE Processing</h2>
-              <p>Text about a project</p>
-              <img src="" alt="">
+            <h2>Thesis Project NDE Processing</h2>
+            <p>My Doctoral research was on damage characterization and residual strength prediction for carbon fiber composite materials using non-destructive scanning techniques, finite element modeling, and experimental testing.</p>
+            <br>
+            <p>I developed post-processing software in Matlab to convert complex 3D X-ray Computed Tomography scan data into structured damage information for models and visualizations</p>
+            <br>
+            <p>I created automated Python and Matlab scripts to generate finite element models that incorporated the results from my damage processing, and compared the model results with experiments.</p>
+            <br>
+            
+            <!-- <p>For my Doctoral research I studied damage formation and residual strength in impacted carbon fiber composite materials. Due to their layered construction, carbon fiber materials, significant separation between layers and cracking in the epoxy between fibers can be created with little to no external visibility. To characterize damage in these materials, non-destructive scanning</p> -->
+            <div class="image-box">
+              <img src="./assets/images/CTVis.png" alt="3D visualization of damage to composite structure, post-processed from X-ray CT.">
+            </div>
+            <div class="image-box" id="curved-CT">
+              <img src="./assets/images/CurvedFit.png" alt="Fitting of curved geometry in X-ray CT volume data.">
+              <img src="./assets/images/CurvedNormals.png" alt="Indentifying geometry curvature and internal orientation.">
+              <img src="./assets/images/PlyIdentification.png" alt="Tagging of geometry into composite layers.">
+              <img src="./assets/images/DamageTagging.png" alt="Marking damaged pixels by containing layer.">
+              <img src="./assets/images/CurvedCTVis.png" alt="Final processed CT visualization.">
+            </div>
+              
           </article>
   
           <article id="project-2">
@@ -54,12 +83,14 @@
             <p>Text about a project</p>
             <img src="" alt="">
           </article>
+
         </section>
   
         <section id="contact">
           <ul>
             <li>Github</li>
             <li>LinkedIn</li>
+            <li>Email</li>
             <li>Thesis</li>
           </ul>
         </section>
