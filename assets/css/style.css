@@ -5,10 +5,10 @@
 }
 
 :root {
-  --backcolor: darkslateblue;
-  --splashcolor: gray;
-  --boxcolor: rgb(165, 190, 186);
-  --bordercolor: black
+  --backcolor: #2b6777;
+  --splashcolor: #c8d8e4;
+  --boxcolor: #f2f2f2;
+  --bordercolor: #52ab98;
 }
 
 body {
@@ -20,10 +20,13 @@ body {
   display: flex;
   flex-direction: row-reverse;
   height: 100%;
+  width: 85%;
   background-color: var(--splashcolor);
 }
 
 nav {
+  position: fixed;
+  right: 0;
   flex: 1 1 15%;
   height: 100%;
   background-color: var(--splashcolor);
@@ -31,16 +34,20 @@ nav {
 
 nav ul {
   display: flex;
+  flex-direction: column;
   padding: 0px;
   list-style: none;
   width: 100%;
+  height: 100%;
 }
 
 nav ul li {
   padding-top: 2%;
   border-bottom: 3px solid var(--bordercolor);
   width: 100%;
-  text-align: center
+  height: 10%;
+  text-align: center;
+  margin: auto;
 }
 
 .sticky {
@@ -52,7 +59,22 @@ nav ul li {
   height: 100%;
 }
 
+#head-block {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+}
+
+#profile-pic {
+  flex: 1 0 20%;
+}
+
+#profile-pic img {
+  height: 100%;
+}
+
 header {
+  flex: 8 1 80%;
   color: white;
 }
 
@@ -112,6 +134,7 @@ ex. Ph.D. project as carbon-fiber tiling
   background-size: cover;
   background-position: center;
   padding: 0px;
+  margin-top: 10px;
 }
 
 #about-me {
@@ -142,10 +165,22 @@ ex. Ph.D. project as carbon-fiber tiling
   border-radius: 5px;
 }
 
+.full-image-box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
 /* Ask Frank for nice model input graphic that he generated */
 .image-box {
-  display: block flex;
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  border: 1px solid black;
+  justify-content: center;
+  align-content: center;
+  padding: 5px;
 }
 
 .projects {
@@ -157,8 +192,45 @@ ex. Ph.D. project as carbon-fiber tiling
   border-radius: 5%;
 }
 
+#curved-CT {
+  flex: 4 1 60%;
+  display: flex;
+}
+
+#vis-3d {
+  flex: 2 1 40%;
+}
+
+#vis-3d img {
+  width: 80%;
+  margin: 3%;
+}
+
 #curved-CT img {
+  width: 100%;
   padding: 10px 0 10px 0;
+}
+
+figcaption {
+  text-align: center;
+}
+
+/* Figure captions for CT processing flow-through, on figure caption */
+.on-fig {
+  color: white;
+  position: relative;
+  top: -6%;
+}
+
+
+#contact ul {
+  list-style: none;
+  display: flex;
+}
+
+#contact ul li {
+  flex: 1 1 20%;
+
 }
 
 footer {

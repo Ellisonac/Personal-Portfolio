@@ -9,35 +9,61 @@
   <div id="flexbox-main">
     <nav>
       <ul id="nav-list">
-        <li>About Me</li>
-        <li>My Project 1</li>
-        <li>My Project 2</li>
-        <li>Contact Me</li>
+        <li ><a href="#about-me">About Me</a></li>
+        <li ><a href="#project-1">Thesis Project</a></li>
+        <li ><a href="#project-2">Project 2</a></li>
+        <li ><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <script type="text/javascript">
+
+      function navScroll() {
+        let pos = document.documentElement.scrollTop
+        let ul = document.querySelector("#nav-list")
+
+        if (pos > 200) {
+          console.log(ul.children[1])
+          ul.children[1].height = "20%";
+          ul.children[1].style.backgroundColor = 'green';
+          ul.children[1].setAttribute("color","green");
+        }
+
+        let
+
+
+
+      }
+
+      document.body.onscroll = navScroll;
+
+
       window.addEventListener("scroll", function(){
         let nav = document.querySelector("nav")
         let nav_list = document.querySelector("#nav-list")
         nav.classList.toggle("sticky", window.scrollY > 0);
         nav_list.classList.toggle("test", window.scrollY > 0);
-        console.log(nav_list.children[1]["flex-grow"])
+        // console.log(nav_list.children[1]["flex-grow"])
         // nav_list.children[1]["flex-grow"] = "5";
         nav_list.children[1].setAttribute("flex-grow",5,window.scrollY > 0);
         
         
       })
+
     </script>
 
 
     <div id="row-flex">
       <section id="head-block">
+        <div id="profile-pic">
+          <img src="assets/images/uku-picture.jpeg" alt="Andrew Ellison playing ukulele." />
+        </div>
         <header>
           <h1>Andrew Ellison Portfolio</h1>
           <p>Check it out</p>
         </header>
-        <div class="banner"></div>
+        
       </section>
+      <div class="banner"></div>
   
       <main>
         <section id="about-me">
@@ -63,21 +89,28 @@
             <br>
             <p>I created automated Python and Matlab scripts to generate finite element models that incorporated the results from my damage processing, and compared the model results with experiments.</p>
             <br>
-            
-            <!-- <p>For my Doctoral research I studied damage formation and residual strength in impacted carbon fiber composite materials. Due to their layered construction, carbon fiber materials, significant separation between layers and cracking in the epoxy between fibers can be created with little to no external visibility. To characterize damage in these materials, non-destructive scanning</p> -->
-            <div class="image-box">
-              <img src="./assets/images/CTVis.png" alt="3D visualization of damage to composite structure, post-processed from X-ray CT.">
-            </div>
-            <div class="image-box" id="curved-CT">
-              <img src="./assets/images/CurvedFit.png" alt="Fitting of curved geometry in X-ray CT volume data.">
-              <img src="./assets/images/CurvedNormals.png" alt="Indentifying geometry curvature and internal orientation.">
-              <img src="./assets/images/PlyIdentification.png" alt="Tagging of geometry into composite layers.">
-              <img src="./assets/images/DamageTagging.png" alt="Marking damaged pixels by containing layer.">
-              <img src="./assets/images/CurvedCTVis.png" alt="Final processed CT visualization.">
+            <div class="full-image-box">
+              <div class="image-box" id="curved-CT">
+                <img src="./assets/images/CurvedFit.png" alt="Fitting of curved geometry in X-ray CT volume data.">
+                <figcaption class="on-fig">Fit Exterior</figcaption>
+                <img src="./assets/images/CurvedNormals.png" alt="Indentifying geometry curvature and internal orientation.">
+                <figcaption class="on-fig">Calculate Curvature</figcaption>
+                <img src="./assets/images/PlyIdentification.png" alt="Tagging of geometry into composite layers.">
+                <figcaption class="on-fig">Separate Layers</figcaption>
+                <img src="./assets/images/DamageTagging.png" alt="Marking damaged pixels by containing layer.">
+                <figcaption class="on-fig">Tag Damage</figcaption>
+                <figcaption>Curved damage processing flow-through.<br>Bound - Calculate - Partition - Tag</figcaption>
+              </div>
+              <div class="image-box" id="vis-3d">
+                <img src="./assets/images/CTVis.png" alt="3D visualization of damage to composite structure, post-processed from X-ray CT.">
+                <figcaption>Flat panel 3D damage visualization.</figcaption>
+                <img src="./assets/images/CurvedCTVis.png" alt="Final processed CT visualization.">
+                <figcaption>Curved panel 3D damage visualization.</figcaption>
+              </div>
             </div>
               
           </article>
-  
+          <br />
           <article id="project-2">
             <h2>Thesis Project Composites Testing</h2>
             <p>Text about a project</p>
