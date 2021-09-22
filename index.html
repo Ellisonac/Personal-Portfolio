@@ -2,7 +2,7 @@
 <html lang='en-US'>
 <head>
   <title>Andrew Ellison is Here</title>
-  <link rel="Stylesheet" type="text/css" href="assets/css/style.css"/>
+  <link rel="Stylesheet" type="text/css" href="./assets/css/style.css"/>
 </head>
 
 <body>
@@ -15,42 +15,6 @@
         <li ><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <script type="text/javascript">
-
-      function navScroll() {
-        let pos = document.documentElement.scrollTop
-        let ul = document.querySelector("#nav-list")
-
-        if (pos > 200) {
-          console.log(ul.children[1])
-          ul.children[1].height = "20%";
-          ul.children[1].style.backgroundColor = 'green';
-          ul.children[1].setAttribute("color","green");
-        }
-
-        let
-
-
-
-      }
-
-      document.body.onscroll = navScroll;
-
-
-      window.addEventListener("scroll", function(){
-        let nav = document.querySelector("nav")
-        let nav_list = document.querySelector("#nav-list")
-        nav.classList.toggle("sticky", window.scrollY > 0);
-        nav_list.classList.toggle("test", window.scrollY > 0);
-        // console.log(nav_list.children[1]["flex-grow"])
-        // nav_list.children[1]["flex-grow"] = "5";
-        nav_list.children[1].setAttribute("flex-grow",5,window.scrollY > 0);
-        
-        
-      })
-
-    </script>
-
 
     <div id="row-flex">
       <section id="head-block">
@@ -61,18 +25,18 @@
           <h1>Andrew Ellison Portfolio</h1>
           <p>Check it out</p>
         </header>
-        
       </section>
-      <div class="banner"></div>
+      <div class="banner" title="Layer segmentation on a flat carbon fiber composite."></div>
   
       <main>
         <section id="about-me">
           <article>
+            <h2>About Me</h2>
             <ul>
-              <li>I am a Ukulelist because 4 is the appropriate number of strings</li>
               <li>I love automation and image processing</li>
               <li>I have a Ph.D. in Aerospace Composite Structures and a carbon fiber wallet</li>
               <li>Interests: Linguistics, Automation, Music, Learning</li>
+              <li>I am a Ukulelist because 4 is the appropriate number of strings</li>
               <li id="japanese">５年で学んでいますが、日本語を読書しかできるようになりました、残念ですが話せません</li>
               <li id="hindi">पहली बार ससुराल जाके मुझे समझे में आगाया था की मुझे हिंदी सीखना ज़रूरी है |</li>
             </ul>
@@ -80,6 +44,7 @@
           <img src="" alt="">
         </section>
   
+        <!-- Add links to projects, link to thesis -->
         <section class="projects">
           <article id="project-1">
             <h2>Thesis Project NDE Processing</h2>
@@ -121,10 +86,13 @@
   
         <section id="contact">
           <ul>
-            <li>Github</li>
-            <li>LinkedIn</li>
-            <li>Email</li>
-            <li>Thesis</li>
+
+            <!-- Add following code to open links in new tab
+              target="_blank" rel="noopener noreferrer" -->
+            <li><a href="https://github.com/Ellisonac/">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/andrew-ellison-783529122/">LinkedIn</a></li>
+            <li><a href="">Email</a></li>
+            <li><a href="">Thesis</a></li>
           </ul>
         </section>
   
@@ -136,6 +104,8 @@
     </div>
     
   </div>
+
+  <script type="text/javascript" src="./assets/scripts/main.js"></script>
 
 </body>
 

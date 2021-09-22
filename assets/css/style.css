@@ -2,6 +2,7 @@
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 14px;
   margin: 0px;
+  padding: 0px;
 }
 
 :root {
@@ -18,15 +19,15 @@ body {
 
 #flexbox-main {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   height: 100%;
   width: 85%;
   background-color: var(--splashcolor);
 }
 
 nav {
-  position: fixed;
-  right: 0;
+  position: relative;
+  left: 0;
   flex: 1 1 15%;
   height: 100%;
   background-color: var(--splashcolor);
@@ -115,7 +116,7 @@ main section {
 }
 
 article ul {
-
+  padding-left: 3%;
 }
 
 /*
@@ -238,6 +239,7 @@ footer {
   padding: 5px;
 }
 
+/* Add responsive sizing capabilities */
 @media screen and (max-width:992) {
   
 }
