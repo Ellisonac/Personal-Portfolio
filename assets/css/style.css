@@ -1,11 +1,8 @@
-/* TODO: Change h2 to have a vertical seperator when in desktop mode, change color of background to slightly darker in the header section */
-
 * {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 16px;
   margin: 0px;
   padding: 0px;
-  /* outline: 1px solid red; */
 }
 
 :root {
@@ -21,6 +18,7 @@ body {
   background-image: linear-gradient(var(--backcolor),var(--splashcolor));
 }
 
+/* Main container for all divs */
 #flexbox-main {
   display: flex;
   flex-direction: column;
@@ -28,6 +26,7 @@ body {
   width: 100%;
 }
 
+/* Container for profile picture, header, and nav bar */
 #head-block {
   display: flex;
   flex-direction: row;
@@ -64,6 +63,7 @@ h1 {
   text-align: center;
 }
 
+/* Navigation links styline */
 nav {
   position: relative;
   left: 0;
@@ -98,6 +98,7 @@ nav ul li:hover {
   box-shadow: 5px 5px var(--splashcolor) inset;
 }
 
+/* change default link behavior to not change text color */
 a {
   color: inherit;
   text-decoration: inherit;
@@ -105,13 +106,14 @@ a {
   justify-content: center;
 }
 
+/* This class is applied to the header bar when the user is scrolled away from the top of page */
 .sticky {
   background-color: var(--splashcolor);
   height: 80px;
 }
 
 .banner {
-  /* Placeholder image fpr banner */
+  /* Placeholder image for banner */
   background-image: url("https://mobizent.net/wp-content/uploads/2018/04/Home-Four-Banner-Background-Image.png");
 
   /* If showing non-placeholder, swap title to: Layer segmentation on a flat carbon fiber composite */
@@ -132,22 +134,16 @@ main {
   padding: 10px;
 }
 
-main section {
-  margin-bottom: 10px;
-  margin-top: 10px;
-  background-color: var(--boxcolor);
-  box-shadow: 0px 5px 30px black;
-  border-radius: 5px;
-  padding: 5px;
-}
-
 /* Projects class applies to all main content boxes */
 .projects {
   display: flex;
   flex-direction: row;
   flex: 4 1 30%;
   justify-content: space-around;
+  box-shadow: 0px 5px 30px black;
+  border-radius: 5px;
   margin-top: 30px;
+  margin-bottom: 10px;
   padding-top: 15px;
   padding-bottom: 15px;
   background-image: linear-gradient(to right, var(--darkbox) 0% 16%,var(--bordercolor) 17%,var(--boxcolor) 17.5%);
@@ -169,33 +165,22 @@ main section {
   padding-bottom: 0.5rem;
 }
 
+/* Header block for each section article */
 .section-head {
   display: flex;
   flex-direction: row;
   height: 100%;
-
   background-color: var(--darkbox);
 }
 
 h2 {
   font-size: 1.4rem;
   text-align: center;
-  /* border-bottom: 1px solid var(--bordercolor); */
   width: 60%;
   flex: 1 1 15%;
   margin: auto;
   margin-left: 5px;
   margin-right: 5px;
-}
-
-.vertical-line {
-  flex: 0 0 0%;
-  position: relative;
-  border-left: 1px solid black;
-  margin: auto;
-  height: 100px;
-  width: 1px;
-  overflow: auto;
 }
 
 p {
@@ -244,6 +229,7 @@ p {
   border-radius: 5px;
 }
 
+/* Overall div for organizing project images */
 .full-image-box {
   display: flex;
   flex-direction: row;
@@ -342,7 +328,7 @@ footer {
 /* Tablet sized screen mode */
 @media screen and (max-width: 992px) {
   
-  /* Swap section headers to in-column */
+  /* Swap section headers and background gradient to in-column */
   .projects {
     flex-direction: column;
     align-items: center;
