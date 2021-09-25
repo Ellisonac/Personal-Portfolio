@@ -13,4 +13,4 @@ My goal with the projects section is to directly show off the results of my rese
 See my portfolio at: [Portfolio](https://ellisonac.github.io/Personal-Portfolio/)
 
 Capture of deployed portfolio:
-[Screen capture of deployed Portfolio](final.png)
+![Screen capture of deployed Portfolio](final.png)
