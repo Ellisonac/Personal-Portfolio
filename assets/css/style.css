@@ -1,3 +1,5 @@
+/* TODO: Change h2 to have a vertical seperator when in desktop mode, change color of background to slightly darker in the header section */
+
 * {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 16px;
@@ -10,11 +12,11 @@
   --backcolor: #4899ad;
   --splashcolor: #cdb5e9;
   --boxcolor: #f2f2f2;
+  --darkbox: #cccad1;
   --bordercolor: #5299ab;
 }
 
 body {
-  /* background-color: var(--backcolor); */
   margin: 0px;
   background-image: linear-gradient(var(--backcolor),var(--splashcolor));
 }
@@ -33,6 +35,8 @@ body {
   align-items: center;
   height: 100px;
   width: 100%;
+  position: fixed;
+  z-index: 1000;
 }
 
 #profile-pic {
@@ -75,7 +79,6 @@ nav ul {
   padding: 5px;
   list-style: none;
   width: 100%;
-  
   align-items: center;
 }
 
@@ -102,6 +105,11 @@ a {
   justify-content: center;
 }
 
+.sticky {
+  background-color: var(--splashcolor);
+  height: 80px;
+}
+
 .banner {
   /* Placeholder image fpr banner */
   background-image: url("https://mobizent.net/wp-content/uploads/2018/04/Home-Four-Banner-Background-Image.png");
@@ -113,7 +121,7 @@ a {
   background-size: cover;
   background-position: center;
   padding: 0px;
-  margin-top: 10px;
+  margin-top: 100px;
 }
 
 /* Main contains all content except the header/nav bar and footer */
@@ -133,6 +141,7 @@ main section {
   padding: 5px;
 }
 
+/* Projects class applies to all main content boxes */
 .projects {
   display: flex;
   flex-direction: row;
@@ -141,14 +150,17 @@ main section {
   margin-top: 30px;
   padding-top: 15px;
   padding-bottom: 15px;
+  background-image: linear-gradient(to right, var(--darkbox) 0% 16%,var(--bordercolor) 17%,var(--boxcolor) 17.5%);
 }
 
 .project-text {
   flex: 9 1 85%;
+  padding-left: 2%;
 }
 
 .project-text ul {
   padding-left: 3%;
+  padding-right: 2%;
   list-style-type: none;
 }
 
@@ -157,10 +169,18 @@ main section {
   padding-bottom: 0.5rem;
 }
 
+.section-head {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+  background-color: var(--darkbox);
+}
+
 h2 {
   font-size: 1.4rem;
   text-align: center;
-  border-bottom: 1px solid var(--bordercolor);
+  /* border-bottom: 1px solid var(--bordercolor); */
   width: 60%;
   flex: 1 1 15%;
   margin: auto;
@@ -168,15 +188,26 @@ h2 {
   margin-right: 5px;
 }
 
+.vertical-line {
+  flex: 0 0 0%;
+  position: relative;
+  border-left: 1px solid black;
+  margin: auto;
+  height: 100px;
+  width: 1px;
+  overflow: auto;
+}
+
 p {
   padding-left: 3%;
+  padding-right: 2%;
 }
 
 #about-me {
   flex: 1 1 15%;
 }
 
-/* Adding hover over translation for Hindi */
+/* Adding hover over translation for Japanese */
 #japanese {
   position: relative;
   color: royalblue;
@@ -218,6 +249,8 @@ p {
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 .image-box {
@@ -291,12 +324,13 @@ figcaption {
   margin-bottom: 2%;
 }
 
-#contact ul {
+#contact div ul {
   list-style: none;
   display: flex;
+  justify-content: space-evenly;
 }
 
-#contact ul li {
+#contact div ul li {
   flex: 1 1 20%;
 }
 
@@ -311,8 +345,17 @@ footer {
   /* Swap section headers to in-column */
   .projects {
     flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(var(--darkbox) 0 2.5rem,var(--bordercolor) 2.6rem,var(--boxcolor) 2.7rem);
   }
 
+  .project-text {
+    margin-top: 10px;
+  }
+
+  #contact div {
+    width: 80%;
+  }
 
 }
 

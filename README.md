@@ -9,3 +9,7 @@ My goal with the projects section is to directly show off the results of my rese
 - Responsive layout based on the user's screen size, specifically in reordering images as columns and moving column headers.
 - Links to each of the relevant sections can be found on the Navbar at the top of the page.
 - Code is accessible and utilizes alt tags for all images
+
+See my portfolio at: [Portfolio](https://ellisonac.github.io/Personal-Portfolio/)
+
+Final screenshot: [Portfolio screen shot]()
