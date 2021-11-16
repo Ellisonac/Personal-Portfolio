@@ -1,6 +1,6 @@
 * {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   margin: 0px;
   padding: 0px;
 }
@@ -104,6 +104,11 @@ a {
   text-decoration: inherit;
   display: flex;
   justify-content: center;
+}
+
+#resume {
+  display: inline-block;
+  color: royalblue;
 }
 
 /* This class is applied to the header bar when the user is scrolled away from the top of page */
